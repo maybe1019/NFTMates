@@ -1,0 +1,46 @@
+.wallet-modal {
+  .modal-header {
+    padding: 18px 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .wallet-button {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 32px;
+
+    border: 1px solid #888888;
+    border-radius: 14px;
+    margin: 16px 0 0 0;
+
+    cursor: pointer;
+    background-color: #88888800;
+
+    img { height: 36px; }
+    div { font-size: 24px; }
+
+    &:hover {
+      background-color: #88888824;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    & {
+      .modal-header {
+        font-size: 26px;
+      }
+
+      .wallet-button {
+        padding: 14px 20px;
+        width: 210px;
+        div { font-size: 20px; }
+        img { height: 34px; }
+      }
+    }    
+  }
+}

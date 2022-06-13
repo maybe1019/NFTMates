@@ -1,0 +1,11 @@
+{
+  "theme": {
+    "light": {
+      "--primary-bg-color": "#f8ecf7",
+      "--secondary-bg-color": "#ffffff",
+      "--primary-text-color": "#000000",
+      "--secondary-text-color": "#c0ccda"
+    }
+  },
+  "infuraId": "c1ba29d27c6b40779d9a00a8850d4f9e"
+}

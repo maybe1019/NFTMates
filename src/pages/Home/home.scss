@@ -1,0 +1,72 @@
+.home {
+  .banner {
+    position: relative;
+
+    background-image: url(../../assets/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .bg-color {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      z-index: 1;
+
+      opacity: 0.7;
+    }
+
+    .container {
+      display: flex;
+      gap: 14px;
+      min-height: 500px;
+      
+      position: relative;
+      z-index: 2;
+
+      > div {
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        width: 0;
+        flex-grow: 1;
+
+        img {
+          width: 96%;
+          margin: auto;
+        }
+
+        .btn-group {
+          display: flex;
+          gap: 20px;
+        }
+      }
+      
+      @media screen and (max-width: 768px) {
+        & {
+          flex-direction: column;
+          > div {
+            width: 100%;
+            min-height: 0;
+            padding: 20px 0;
+
+            .btn-group {
+              justify-content: center;
+            }
+
+            h1 {
+              padding-top: 20px;
+              text-align: center;
+            }
+            img {
+              width: 90%;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}

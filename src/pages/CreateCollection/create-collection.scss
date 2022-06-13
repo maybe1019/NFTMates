@@ -1,0 +1,39 @@
+.create-collection {
+  .container {
+    max-width: 720px;
+
+    .field p {
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    .revenue-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .revenue-item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        input {
+          padding: 10px 14px;
+        }
+
+        .account {
+          flex-grow: 1;
+        }
+        .amount {
+          width: 80px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          
+          input {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

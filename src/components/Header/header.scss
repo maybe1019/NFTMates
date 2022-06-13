@@ -1,0 +1,52 @@
+header {
+  position: relative;
+  padding: 15px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .logo {
+    margin-right: auto;
+    
+    img {
+      height: 50px;
+    }
+  }
+
+  .abc {
+    color: #516ab4;
+  }
+
+  button.account-button {
+    outline: none;
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    
+    background-image: url(../../assets/images/account.png);
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      box-shadow: 0 0 10px #888;
+    }
+  }
+
+}
+.drawer {
+  display: flex;
+  flex-direction: column;
+  
+  .user-image {
+    padding: 20px 0;
+    text-align: center;
+    img { width: 60%; }
+  }
+}
