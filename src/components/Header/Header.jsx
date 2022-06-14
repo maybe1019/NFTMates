@@ -11,7 +11,6 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import {
   IconButton,
   Drawer,
-  Button,
   Box
 } from "@mui/material";
 import { Link } from 'react-router-dom';

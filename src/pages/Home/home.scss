@@ -69,4 +69,28 @@
       
     }
   }
+
+  .notable-drops {
+    padding: 30px 0;
+    
+    .items {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+
+      .item-container {
+        width: 21%;
+        flex-grow: 1;
+        
+        @media screen and (max-width: 992px) {
+          & { width: 34%; }
+        }
+
+        @media screen and (max-width: 576px) {
+          & { width: 100%; }
+        }
+      }
+
+    }
+  }
 }
