@@ -104,7 +104,7 @@ export default function Home() {
         <div className='items'>
           {
             dropNfts.map((item, index) => (
-              <div className="item-container">
+              <div className="item-container" key={index}>
                 <NFTItem {...item} />
               </div>
             ))

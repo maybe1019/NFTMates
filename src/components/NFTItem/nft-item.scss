@@ -8,13 +8,36 @@
     background-position: center;
 
     padding-top: 100%;
-    border: 1px solid #88888888;
+    border: 1px solid #88888833;
   }
   
   .nft-name {
     font-size: 18px;
     font-weight: bold;
-    padding: 24px 0 12px 8px;
+    padding: 24px 0 12px 20px;
+
+    position: relative;
+
+    .creator-image {
+      position: absolute;
+      right: 20px;
+      top: -28px;
+      width: 54px;
+      height: 54px;
+      
+      overflow: hidden;
+      border-radius: 50%;
+
+      background-color: var(--secondary-bg-color);
+      border-top: 1px solid var(--primary-theme-color);
+
+      img {
+        width: 46px;
+        height: 46px;
+        margin: 4px;
+        border-radius: 50%;
+      }
+    }
   }
 
   .nft-price {
@@ -22,6 +45,8 @@
     align-items: center;
     gap: 10px;
     font-size: 16px;
+
+    padding-left: 20px;
 
     img {
       height: 22px;

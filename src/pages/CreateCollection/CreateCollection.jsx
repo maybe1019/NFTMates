@@ -13,7 +13,7 @@ import { useState } from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import { useSnackbar } from "notistack";
-import { useEthers } from '@usedapp/core'
+import { useEthers } from "@usedapp/core";
 
 export default function CreateCollection() {
   const fields = [
@@ -49,17 +49,19 @@ export default function CreateCollection() {
     },
   ];
 
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar()
-  const { account } = useEthers()
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  const { account } = useEthers();
 
   const [createLoading, setCreateLoading] = useState(false);
   const [revenueSplit, setRevenueSplit] = useState(false);
   const [revenueList, setRevenueList] = useState([]);
   const [ownerAmount, setOwnerAmount] = useState(100);
-  const [warningKey, setWarningKey] = useState(-1)
+  const [warningKey, setWarningKey] = useState(-1);
 
-  let f = false
-  if(f) {setCreateLoading(true)}
+  let f = false;
+  if (f) {
+    setCreateLoading(true);
+  }
 
   useEffect(() => {
     let amount = 100;
@@ -72,19 +74,18 @@ export default function CreateCollection() {
   }, [revenueList]); //eslint-disable-line
 
   useEffect(() => {
-    if(account && warningKey !== -1) {
-      closeSnackbar(warningKey)
-      setWarningKey(-1)
-      return
+    if (account && warningKey !== -1) {
+      closeSnackbar(warningKey);
+      setWarningKey(-1);
+      return;
     }
-    if(!account && warningKey === -1) {
-      setWarningKey(enqueueSnackbar(
-        "Wallet Unconnected!", 
-        {
-          variant:'warning',
-          persist: true
-        }
-      ))
+    if (!account && warningKey === -1) {
+      setWarningKey(
+        enqueueSnackbar("Wallet Unconnected!", {
+          variant: "warning",
+          persist: true,
+        })
+      );
     }
   }, [account]); //eslint-disable-line
 
@@ -150,7 +151,7 @@ export default function CreateCollection() {
                   <OutlinedInput
                     name="account"
                     placeholder=""
-                    value={account ? account : '0x...'}
+                    value={account ? account : "0x..."}
                     fullWidth={true}
                     disabled={true}
                   />

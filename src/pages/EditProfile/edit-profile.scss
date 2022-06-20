@@ -1,0 +1,47 @@
+.edit-profile.container {
+  max-width: 720px;
+  
+  h1 {
+    padding: 24px;
+  }
+
+  .placeholder {
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 24px;
+
+    background-color: #ffd8dd;
+    
+    img {
+      width: 100px;
+    }
+  }
+
+  .user-image {
+    margin-bottom: 18px;
+    width: 80px;
+    height: 80px;
+
+    transform: translate(44px, -40px);
+
+    img {
+      width: 80px;
+      height: 80px;
+
+      border-radius: 50%;
+      border: 6px solid var(--primary-bg-color);
+    }
+  }
+
+  .field p {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    padding-left: 6px;
+  }
+
+}

@@ -15,14 +15,26 @@ import {
 } from "@mui/material";
 import { Link } from 'react-router-dom';
 import { LoadingButton } from '@mui/lab';
+import { useEthers, shortenAddress } from '@usedapp/core';
 
 export default function Header() {
   const theme = useSelector((state) => state.theme)
   const dispatch = useDispatch()
+  const { account, deactivate } = useEthers()
 
   const [openDrawer, setOpenDrawer] = useState(false)
   const [walletModalOpen, setWalletModalOpen] = useState(false)
   const [connectButtonLoading, setConnectButtonLoading] = useState(false)
+
+  const handleConnectButtonClick = () => {
+    if(account) {
+      deactivate()
+    }
+    else {
+      setWalletModalOpen(true)
+      setConnectButtonLoading(true)
+    }
+  }
 
   return (
     <div className='container'>
@@ -59,16 +71,26 @@ export default function Header() {
             <div className='user-image'>
               <img src="./image/user.png" alt="" />
             </div>
+
+            {
+              account ? 
+                <div className='account-info'>
+                  <div className='account-name'>User</div>
+                  <div className='wallet-address'>{shortenAddress(account)}</div>
+                </div>
+              : ''
+            }
+            
             <LoadingButton
               loading={connectButtonLoading}
               variant='contained'
               endIcon={<AccountBalanceWalletIcon/>}
-              onClick={() => {
-                setWalletModalOpen(true)
-                setConnectButtonLoading(true)
-              }}
+              onClick={handleConnectButtonClick}
+              className='connect-button'
             >
-              Connect Wallet
+              {
+                account ? "disconnect" : 'Connect Wallet'
+              }
             </LoadingButton>
           </Box>
         </Drawer>

@@ -1,0 +1,30 @@
+{
+  "main": {
+    "--primary-theme-color": "#d01498",
+    "--primary-theme-color-light": "#df13a2",
+    "--primary-theme-color-dark": "#cc1896",
+    "--secondary-theme-color": "#8364cb",
+    "--secondary-theme-color-light": "#6480d4",
+    "--secondary-theme-color-dark": "#516ab4"
+  },
+  "dark": {
+    "--primary-bg-color": "#0c0414",
+    "--secondary-bg-color": "#121a24",
+    "--theme-bg-color-1": "#1b2a3d",
+    "--theme-bg-color-2": "#20334c",
+    "--primary-text-color": "#ffffff",
+    "--secondary-text-color": "#eff2f6",
+    "--theme-text-color-1": "#d9d7e0",
+    "--theme-text-color-2": "#bebec3"
+  },
+  "light": {
+    "--primary-bg-color": "#fbf8fa",
+    "--secondary-bg-color": "#ffffff",
+    "--theme-bg-color-1": "#eaeef2",
+    "--theme-bg-color-2": "#d4d8dc",
+    "--primary-text-color": "#000000",
+    "--secondary-text-color": "#121a24",
+    "--theme-text-color-1": "#3b4050",
+    "--theme-text-color-2": "#423c63"
+  }
+}

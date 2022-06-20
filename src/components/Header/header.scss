@@ -30,7 +30,7 @@ header {
     width: 40px;
     border-radius: 50%;
     
-    background-image: url(../../assets/images/account.png);
+    background-image: url(../../assets/images/user.png);
     background-size: cover;
     background-position: center;
 
@@ -38,15 +38,36 @@ header {
       box-shadow: 0 0 10px #888;
     }
   }
-
 }
 .drawer {
   display: flex;
   flex-direction: column;
+  height: 100%;
   
   .user-image {
     padding: 20px 0;
     text-align: center;
-    img { width: 60%; }
+    img { width: 60%; border-radius: 50%; }
+  }
+
+  .account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .account-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .wallet-address {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .connect-button {
+    margin-top: auto !important;
   }
 }
